@@ -43,16 +43,27 @@
           </v-layout>
         </v-card>
       </div>
+      <carousel :hideDelimiters="notTrue" :hideDelimitersBg="!notTrue" :showArrows="notTrue"/>     
     </div>
   </div>
 
 </template>
 
 <script>
-
+import carousel from '../components/public/carousel'
 export default {
+  data: ()=>({
+    colors: [
+      'primary',
+      'secondary',
+      'yellow darken-2',
+      'red',
+      'orange',
+    ],
+    notTrue: false,
+  }),
   components: {
-    // HelloWorld,
+    carousel,
   }
 };
 </script>
