@@ -43,7 +43,7 @@
           </v-layout>
         </v-card>
       </div>
-      <carousel :hideDelimiters="notTrue" :hideDelimitersBg="!notTrue" :showArrows="notTrue"/>     
+      <carousel :height="100" :hideDelimiters="notTrue" :hideDelimitersBg="!notTrue" :showArrows="notTrue"/>     
     </div>
   </div>
 

@@ -1,11 +1,11 @@
 <template>
-  <v-carousel height="100px" 
+  <v-carousel :height="height+'px'" 
     cycle 
     :hide-delimiter-background ="hideDelimitersBg"
     :hide-delimiter ="hideDelimiters"
     :show-arrows="showArrows">
     <v-carousel-item
-        v-for="(color, i) in colors"
+        v-for="(color, i) in items"
         :key="color"
     >
       <v-sheet
@@ -28,7 +28,7 @@
 <script>
     export default {
         props:{
-            colors:{
+            items:{
                 type: Array,
                 default: ()=>{
                     return [
@@ -52,6 +52,10 @@
             hideDelimitersBg:{
                 type: Boolean,
                 default: false
+            },
+            height:{
+                type: Number,
+                default: 300
             },
         }
     }
